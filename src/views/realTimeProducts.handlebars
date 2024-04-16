@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket.io</title>
+</head>
+
+<body>
+
+    <h2>Productos RealTime</h2>
+
+    <ul class="list-group" id="list-group">
+        {{#each productos}}
+        <li class="list-group-item">{{title}}</li>
+        {{/each}}
+    </ul>
+
+
+
+
+
+
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/realTime.js"></script>
+</body>
+
+</html>
