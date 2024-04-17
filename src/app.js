@@ -29,3 +29,7 @@ const server =
 app.listen(PORT, ()=>console.log(`Server online en puerto ${PORT}`));
 
  export const io = new Server(server)
+
+ io.on('connection', (socket)=>{
+    io.emit('nuevaConexion', socket.id)
+ } )

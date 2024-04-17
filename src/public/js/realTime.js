@@ -1,5 +1,16 @@
 const socket = io();
 
+socket.on('nuevaConexion', data=>{
+    Toastify({
+
+        text: `${data} se ha conectado!`,
+
+        duration: 3000
+
+    }).showToast();
+})
+
+
 const list = document.getElementById('list-group');
 
 socket.on("nuevoProducto", newProduct => {
